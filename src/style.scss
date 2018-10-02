@@ -1,0 +1,62 @@
+/* =================================
+   GLOBAL SETTINGS 
+   ================================= */
+
+
+   .v-content {
+        background-color: #F4F6F8;
+   }
+
+/* Input
+   ----------------------------- */
+   v-text-field {
+    background-color: #FFFFFF;
+   }
+
+
+/* elevation
+   ----------------------------- */
+  
+   .elevation-box-1 {
+      box-shadow: 
+        0 1px 2px 0 rgba(0, 0, 0, .12)!important
+
+   }
+
+/* Data tables
+   ----------------------------- */
+   
+   .dataTableRounded {
+    border-radius: 4px;
+      .v-table {
+        border-radius: 4px;
+      }
+      .v-datatable__actions {
+        border-radius: 0 0 4px 4px;
+      }
+   }
+   
+
+
+/* Topbar
+   ----------------------------- */
+   
+   
+
+
+
+
+
+
+
+
+/* Views
+   ----------------------------- */
+
+.ViewHeader {
+  margin: 5px 0 30px 0;
+  .headline {
+    font-size: 24px !important;
+    font-weight: 500;
+  }
+}
