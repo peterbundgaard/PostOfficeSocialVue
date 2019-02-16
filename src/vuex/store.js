@@ -13,6 +13,10 @@ const state = {
     show: false,
     text: ''
   },
+  loader: {
+    show: false,
+    text: ''
+  },
   fullscreenDialog: false
 }
 
@@ -34,6 +38,13 @@ const mutations = {
   },
   HIDE_SNACKBAR (state) {
     state.snackbar.show = false
+  },
+  SHOW_LOADER (state, payload) {
+    state.loader.show = true
+    state.loader.text = payload
+  },
+  HIDE_LOADER (state) {
+    state.loader.show = false
   },
   TOGGLE_FULLSCREEN_DIALOG (state, payload) {
     state.fullscreenDialog = !!payload

@@ -25,12 +25,22 @@
       </v-btn>
 
       <v-btn
+        :to="{ name: 'UserChat' }"
+        color="blue"
+        flat
+        value="Chat"
+      >
+        <span>Chat</span>
+        <v-icon>message</v-icon>
+      </v-btn>
+      
+      <v-btn
         :to="{ name: 'UserInsights' }"
         color="blue"
         flat
         value="insights"
       >
-        <span>Insights</span>
+        <span>Leaderboard</span>
         <v-icon>equalizer</v-icon>
       </v-btn>
 

@@ -5,12 +5,44 @@
 
    .v-content {
         background-color: #F4F6F8;
+        background-color: #F4F4F4;
+        /* background-color: #FaFaFa; */
    }
 
-/* Input
+/* Text
    ----------------------------- */
-   v-text-field {
-    background-color: #FFFFFF;
+   .font-align-left {
+    text-align: left;
+   }
+
+   .font-align-right {
+    text-align: right;
+   }
+
+   .font-align-center {
+    text-align: center;
+   }
+
+   .headline {
+     font-size: 24px;
+   }
+
+   .title{
+     font-weight: 300!important;
+   }
+
+
+
+   /* Input
+   ----------------------------- */
+
+   .theme--light .v-text-field--outline .v-input__slot {
+    border: 0px solid rgba(0,0,0,.54) !important;
+    background-color: #FFFFFF !important;
+   }
+  
+   .v-input__slot .primary--text {
+    color: #000 !important;
    }
 
 
@@ -35,14 +67,59 @@
         border-radius: 0 0 4px 4px;
       }
    }
+
+/* Cards
+   ----------------------------- */
+
+   .v-card {
+    border-radius: 4px !important;
+   }
+   .v-card-padding{
+     padding: 20px;
+   }
+
    
+/* Lists
+   ----------------------------- */
+
+   .v-list {
+    border-radius: 4px;
+   }
+
+   .background-none{
+     background: none !important;
+   }
+
+
+/* Dialog
+   ----------------------------- */
+
+   .v-dialog .v-toolbar {
+    border-radius: 0px !important;
+   }
+
+   .v-dialog-nude {
+    box-shadow: none !important;
+   }
+
+   .v-dialog-light {
+     color: #FFFFFF;
+   }
+
+   .v-overlay--active:before {
+    opacity: .80 !important;
+    }
 
 
 /* Topbar
    ----------------------------- */
    
    
-
+   .signupflow .v-toolbar {
+    box-shadow: 0 1px 0px 0px rgba(0, 0, 0, .1);
+    background-color: #FFFFFF !important;
+    
+  }
 
 
 
@@ -60,3 +137,29 @@
     font-weight: 500;
   }
 }
+
+/* Auth
+   ----------------------------- */
+
+.logo{
+  padding: 40px 0;
+}
+
+
+/* Sign up
+   ----------------------------- */
+
+.signup-header {
+  padding: 40px 0;
+}
+
+.signupflow .v-progress-linear {
+  margin: 0;
+}
+
+/* Icons
+   ----------------------------- */
+  .icon-white {
+    color: #ffffff !important;
+  }
+

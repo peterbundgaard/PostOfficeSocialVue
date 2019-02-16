@@ -5,6 +5,7 @@ import web from './web'
 import auth from './auth'
 import admin from './admin'
 import user from './user'
+import signupflows from './signupflows'
 
 Vue.use(Router)
 
@@ -12,7 +13,8 @@ const routes = [
   ...web,
   ...auth,
   ...admin,
-  ...user
+  ...user,
+  ...signupflows
 ]
 
 const router = new Router({ routes })

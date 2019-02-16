@@ -8,6 +8,7 @@ import VeeValidate from 'vee-validate'
 import store from './vuex/store'
 
 import 'vuetify/dist/vuetify.min.css'
+import './stylus/main.styl'
 
 Vue.config.productionTip = false
 

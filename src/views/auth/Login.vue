@@ -1,4 +1,5 @@
 <template>
+  <div><img src="/static/img/logo/160.svg" alt="Logo" class="mb-2 logo"/>
   <v-form @submit.prevent="submit()">
     <v-text-field
       type="email"
@@ -59,7 +60,14 @@
       depressed
       :to="{ name: 'PasswordRecovery' }"
       :disabled="submitting">PASSWORD RECOVERY</v-btn>
+      <v-btn
+      block
+      large
+      depressed
+      :to="{ name: 'Start' }"
+      :disabled="submitting">Signup flow</v-btn>
   </v-form>
+  </div>
 </template>
 
 <script>

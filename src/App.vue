@@ -5,14 +5,16 @@
         <v-progress-circular :size="70" :width="7" color="primary" indeterminate/>
       </v-layout>
       <snackbar/>
+      <loader/>
       <router-view v-show="!routing"/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import Snackbar from '@/components/snackbar'
+import Loader from '@/components/loader'
 import './style.scss'
 
 
@@ -20,7 +22,8 @@ export default {
   name: 'app',
   computed: mapState(['routing']),
   components: {
-    Snackbar
+    Snackbar,
+    Loader
   }
 }
 </script>

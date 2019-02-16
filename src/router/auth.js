@@ -2,6 +2,7 @@ const Auth = () => import(/* webpackChunkName: "auth" */ '@/views/Auth')
 const Login = () => import(/* webpackChunkName: "auth" */ '@/views/auth/Login')
 const SignUp = () => import(/* webpackChunkName: "auth" */ '@/views/auth/SignUp')
 const PasswordRecovery = () => import(/* webpackChunkName: "auth" */ '@/views/auth/PasswordRecovery')
+const Start = () => import(/* webpackChunkName: "auth" */ '@/views/auth/Start')
 
 export default [
   {
@@ -33,6 +34,14 @@ export default [
         component: PasswordRecovery,
         meta: {
           title: 'PasswordRecovery'
+        }
+      },
+      {
+        path: 'start',
+        name: 'Start',
+        component: Start,
+        meta: {
+          title: 'Start'
         }
       }
     ]

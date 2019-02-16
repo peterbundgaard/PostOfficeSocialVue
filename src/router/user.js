@@ -2,6 +2,7 @@ const User = () => import(/* webpackChunkName: "user" */ '@/views/User')
 const UserHome = () => import(/* webpackChunkName: "user" */ '@/views/user/UserHome')
 const UserTemplates = () => import(/* webpackChunkName: "user" */ '@/views/user/UserTemplates')
 const UserCalendar = () => import(/* webpackChunkName: "user" */ '@/views/user/UserCalendar')
+const UserChat = () => import(/* webpackChunkName: "user" */ '@/views/user/UserChat')
 const UserInsights = () => import(/* webpackChunkName: "user" */ '@/views/user/UserInsights')
 const UserAccount = () => import(/* webpackChunkName: "user" */ '@/views/user/UserAccount')
 const Settings = () => import(/* webpackChunkName: "user" */ '@/views/user/Settings')
@@ -41,11 +42,19 @@ export default [
         }
       },
       {
+        path: 'chat',
+        name: 'UserChat',
+        component: UserChat,
+        meta: {
+          title: 'Chat'
+        }
+      },
+      {
         path: 'insights',
         name: 'UserInsights',
         component: UserInsights,
         meta: {
-          title: 'Insights'
+          title: 'Leaderboard'
         }
       },
       {

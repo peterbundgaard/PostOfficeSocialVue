@@ -3,7 +3,7 @@
     <v-container>
       <div class="ViewHeader">
         <div class="headline">Calendar</div>
-        <div class="body-1">Her kan man skrive en tagline</div>
+        <div class="body-1">Yeah!!</div>
     </div>
     </v-container>
   </div>

@@ -2,13 +2,14 @@
   <v-snackbar
     v-model="snackbar.show"
     color=""
-    :top="true"
-    :bottom="false"
+    :top="false"
+    :bottom="true"
     :left="false"
-    :right="false"
-    :multi-line="true"
+    :right="true"
+    :multi-line="false"
     :timeout="5000" :vertical="false">
     {{ snackbar.text }}
+    <!-- <v-icon class="icon-white">check</v-icon> -->
     <v-btn
       dark
       flat

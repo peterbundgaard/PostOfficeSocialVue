@@ -1,4 +1,5 @@
 <template>
+  <div><img src="/static/img/logo/160.svg" alt="Logo" class="mb-2 logo"/>
   <v-form @submit.prevent="submit()">
     <v-text-field
       type="email"
@@ -27,7 +28,13 @@
       depressed
       :to="{ name: 'Login' }"
       :disabled="submitting">BACK</v-btn>
+    <v-btn
+      block
+      large
+      depressed
+      @click="submitme()">Show snack</v-btn>
   </v-form>
+  </div>
 </template>
 
 <script>
@@ -78,6 +85,9 @@ export default {
           })
         }
       })
+    },
+    submitme () {
+      this.SHOW_SNACKBAR('Password reset email sent.')
     }
   },
 
