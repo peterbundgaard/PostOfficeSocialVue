@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>leaderIcon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="leaderIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Trophy" transform="translate(4.000000, 5.000000)" stroke="#000000" stroke-width="2">
+            <path d="M6,19 L14,19" id="Shape"></path>
+            <path d="M10,15 L10,19" id="Shape"></path>
+            <path d="M4.4,0 L15.6,0 C16.3731986,0 17,0.696445945 17,1.55555556 L17,6.22222222 C17,10.5177703 13.8659932,14 10,14 C8.14348457,14 6.36300718,13.1805579 5.05025253,11.7219416 C3.73749788,10.2633254 3,8.28501714 3,6.22222222 L3,1.55555556 C3,0.696445945 3.62680135,0 4.4,0 Z" id="Shape"></path>
+            <path d="M3,2 C1.34314575,2 0,3.34314575 0,5 C0,6.65685425 1.34314575,8 3,8" id="Oval"></path>
+            <path d="M17,2 C15.3431458,2 14,3.34314575 14,5 C14,6.65685425 15.3431458,8 17,8" id="Oval-Copy" transform="translate(17.000000, 5.000000) scale(-1, 1) translate(-17.000000, -5.000000) "></path>
+        </g>
+    </g>
+</svg>

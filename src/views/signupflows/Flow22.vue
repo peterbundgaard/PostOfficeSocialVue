@@ -15,10 +15,11 @@
     </v-toolbar-items>
   </v-toolbar>
   <v-progress-linear
-      color="secondary"
+      color="primary"
       height="2"
       value="20"
     ></v-progress-linear>
+    <i data-feather="circle"></i>
   <!-- <v-progress-linear :indeterminate="true"></v-progress-linear> -->
     <v-container text-xs-center>
     <v-layout align-center justify-center row fill-height>
@@ -159,7 +160,7 @@ export default {
 
         setTimeout(() => (
           this.$router.push({name:'Flow23'}),
-          this.SHOW_SNACKBAR('Profile successfully created. Welcome to Post Office :-)')
+          this.SHOW_SNACKBAR('Profile successfully created.')
           ), 4000)
       }
     },

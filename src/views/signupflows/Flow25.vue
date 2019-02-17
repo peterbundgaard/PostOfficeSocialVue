@@ -18,7 +18,7 @@
     </v-toolbar-items>
   </v-toolbar>
   <v-progress-linear
-      color="secondary"
+      color="primary"
       height="2"
       value="80"
     ></v-progress-linear>

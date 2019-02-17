@@ -1,57 +1,64 @@
 <template>
+
     <v-bottom-nav
+      class="userBottomNav"
       :active.sync="bottomNav"
       :value="true"
       absolute
     >
       <v-btn
         :to="{ name: 'UserCalendar' }"
-        color="blue"
+        color="#000"
         flat
         value="calendar"
       >
         <span>Calendar</span>
-        <v-icon>calendar_today</v-icon>
+        <!-- <v-icon>calendar_today</v-icon> -->
+        <img src="@/assets/calIcon.svg" alt="">
       </v-btn>
 
       <v-btn
         :to="{ name: 'UserTemplates' }"
-        color="blue"
+        color="#000"
         flat
         value="create"
       >
         <span>Create</span>
-        <v-icon>gesture</v-icon>
+        <!-- <v-icon>gesture</v-icon> -->
+        <img src="@/assets/createIcon.svg" alt="">
       </v-btn>
 
       <v-btn
         :to="{ name: 'UserChat' }"
-        color="blue"
+        color="#000"
         flat
         value="Chat"
       >
-        <span>Chat</span>
-        <v-icon>message</v-icon>
+        <span>Messages</span>
+        <!-- <v-icon>message</v-icon> -->
+        <img src="@/assets/mesIcon.svg" alt="">
       </v-btn>
       
       <v-btn
         :to="{ name: 'UserInsights' }"
-        color="blue"
+        color="#000"
         flat
         value="insights"
       >
         <span>Leaderboard</span>
-        <v-icon>equalizer</v-icon>
+        <!-- <v-icon>equalizer</v-icon> -->
+        <img src="@/assets/leaderIcon.svg" alt="">
       </v-btn>
 
       <v-btn
         :to="{ name: 'UserAccount' }"
-        color="blue"
+        color="#000"
         flat
         value="account"
       >
         <span>Account</span>
-        <v-icon>settings</v-icon>
+        <!-- <v-icon>settings</v-icon> -->
+        <img src="@/assets/settingsIcon.svg" alt="">
       </v-btn>
 
     </v-bottom-nav>

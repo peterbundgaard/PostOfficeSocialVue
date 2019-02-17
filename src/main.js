@@ -12,7 +12,17 @@ import './stylus/main.styl'
 
 Vue.config.productionTip = false
 
-Vue.use(Vuetify)
+Vue.use(Vuetify, {
+  theme: {
+    "primary": "#F44336",  /* #F44336, #FE3B2C */
+    "secondary": "#000000",
+    "accent": "#82B1FF",
+    "error": "#FF5252",
+    "info": "#2196F3",
+    "success": "#4CAF50",
+    "warning": "#FB8C00"
+  }
+})
 Vue.use(VeeValidate)
 
 /* eslint-disable no-new */
@@ -23,3 +33,5 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+

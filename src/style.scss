@@ -161,7 +161,29 @@
      font-weight: 300!important;
    }
 
+   /* Navigation
+   ----------------------------- */
+   .v-bottom-nav {
+    .v-btn--active .v-btn__content {
+      font-size: 10px !important;
+     }
+    .v-btn .v-btn__content {
+      font-size: 10px !important;
+    }
+    .v-btn {
+      opacity: 0.3 !important;
+      min-width: 60px !important;
+    }
+    .v-btn--active {
+      opacity: 1 !important;
+    }
+   }
 
+   .userBottomNav {
+     img {
+       margin-bottom: 3px;
+     }
+   }
 
    /* Input
    ----------------------------- */
@@ -240,6 +262,17 @@
     opacity: .80 !important;
     }
 
+    .v-dialog--fullscreen {
+      .v-toolbar {
+        box-shadow: 0 1px 0px 0px rgba(0, 0, 0, .1);
+        background-color: #FFFFFF !important;
+      }
+      .v-card{ 
+        background-color: #f4f4f4 !important;
+      }
+      
+    }
+
 
 /* Topbar
    ----------------------------- */
@@ -248,8 +281,11 @@
    .signupflow .v-toolbar {
     box-shadow: 0 1px 0px 0px rgba(0, 0, 0, .1);
     background-color: #FFFFFF !important;
-    
   }
+
+  .v-toolbar__title {
+    font-weight: 600 !important;
+    }
 
 
 
@@ -285,6 +321,8 @@
 
 .signupflow .v-progress-linear {
   margin: 0;
+  position: fixed;
+  display: none;
 }
 
 /* Icons
