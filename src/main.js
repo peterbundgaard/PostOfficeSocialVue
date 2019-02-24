@@ -14,13 +14,16 @@ Vue.config.productionTip = false
 
 Vue.use(Vuetify, {
   theme: {
-    "primary": "#F44336",  /* #F44336, #FE3B2C */
+    "primary": "#1089f9",  /* #F44336 #F44336, #FE3B2C  */
     "secondary": "#000000",
     "accent": "#82B1FF",
     "error": "#FF5252",
     "info": "#2196F3",
     "success": "#4CAF50",
-    "warning": "#FB8C00"
+    "warning": "#FB8C00",
+    "black": "#2d2f39",
+    "darkgrey": "#637178",
+    "lightgrey": "#d6dcdf"
   }
 })
 Vue.use(VeeValidate)

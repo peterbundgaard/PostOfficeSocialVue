@@ -4,7 +4,7 @@
       class="userBottomNav"
       :active.sync="bottomNav"
       :value="true"
-      absolute
+      fixed
     >
       <v-btn
         :to="{ name: 'UserCalendar' }"

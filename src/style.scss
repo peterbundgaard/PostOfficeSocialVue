@@ -60,12 +60,22 @@
 
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('./assets/fonts/ProximaNova-Semibold.eot');
-    src: url('./assets/fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
-        url('./assets/fonts/ProximaNova-Semibold.woff2') format('woff2'),
-        url('./assets/fonts/ProximaNova-Semibold.woff') format('woff');
-    font-weight: 600;
+    src: url('./assets/fonts/ProximaNova-Medium.eot');
+    src: url('./assets/fonts/ProximaNova-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/ProximaNova-Medium.woff2') format('woff2'),
+        url('./assets/fonts/ProximaNova-Medium.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./assets/fonts/ProximaNova-Semibold.eot');
+  src: url('./assets/fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/ProximaNova-Semibold.woff2') format('woff2'),
+      url('./assets/fonts/ProximaNova-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
@@ -128,14 +138,34 @@
     font-style: italic;
 }
 
+$primary: #1089f9;  /* #F44336 #F44336, #FE3B2C */
+$secondary: #000000;
+$accent: #82B1FF;
+$error: #FF5252;
+$info: #2196F3;
+$success: #4CAF50;
+$warning: #FB8C00;
+$white: #FFFFFF;
+$black: #2d2f39;
+$darkgrey: #637178;
+$grey: #afb8bc;
+$lightgrey: #d6dcdf;
+$background: #ffffff;
+$backgrounddark: #f4f7fb;
+
 /* Body
    ----------------------------- */
 
    .v-content {
         background-color: #F4F6F8;
-        background-color: #F4F4F4;
+        background-color: $background;
         /* background-color: #FaFaFa; */
    }
+   .user-view {
+      padding-top: 60px;
+      height: 100%;
+      background-color: $backgrounddark;
+  }
 
 /* Text
    ----------------------------- */
@@ -153,8 +183,9 @@
     text-align: center;
    }
 
-   .headline {
-     font-size: 24px;
+   .headline1 {
+     font-size: 28px !important;
+     font-weight: 500 !important;
    }
 
    .title{
@@ -185,18 +216,90 @@
      }
    }
 
+
+  /* Menus
+   ----------------------------- */
+   .v-menu__content {
+    box-shadow: 0 30px 40px 0 rgba(12,20,39,.2) !important;
+    border-radius: 6px !important;
+   }
+   
+
+   /* Buttons
+   ----------------------------- */
+
+   .v-content .v-btn--depressed {
+    border-radius: 6px;
+    text-transform: capitalize;
+    font-weight: 600;
+   }
+
+   .btn-icon-Left {
+     position: absolute;
+     left: 0px;
+   }
+
+   .large-btn {
+     height: 52px !important;
+   }
+
    /* Input
    ----------------------------- */
 
+   .v-input {
+     font-weight: 500;
+  }
+
    .theme--light .v-text-field--outline .v-input__slot {
-    border: 0px solid rgba(0,0,0,.54) !important;
-    background-color: #FFFFFF !important;
-   }
-  
-   .v-input__slot .primary--text {
-    color: #000 !important;
+    border: 1px solid $lightgrey !important;
+    background-color: $background !important;
+    border-radius: 6px !important;
+    min-height: 64px !important;
+    padding: 0 20px !important;
    }
 
+   .v-text-field--outline.v-text-field--single-line input {
+    margin-top: 15px !important;
+   }
+
+   .v-text-field--outline.v-input--is-focused > .v-input__control > .v-input__slot {
+     border: 1px solid $darkgrey !important;
+   }
+
+  .v-text-field--outline {
+    height: 100px;
+    margin-top: 3px !important;
+  }
+  .input-label {
+    color: $darkgrey;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    }
+
+   .v-input__slot .primary--text {
+    color: $black !important;
+   }
+
+   .v-input--checkbox {
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      color: $darkgrey;
+    }
+    label:hover {
+      color: $black;
+    }
+    .v-icon {
+      color: $lightgrey !important;
+    }
+    .black--text {
+      color: $black !important;
+      }
+    .v-input__control {
+      height: 44px;
+    }
+   }
 
 /* elevation
    ----------------------------- */
@@ -205,6 +308,11 @@
       box-shadow: 
         0 1px 2px 0 rgba(0, 0, 0, .12)!important
 
+   }
+
+   .elevation-custom-10 {
+    -webkit-box-shadow: 0 30px 40px 0 rgba(12,20,39,.1) !important;
+    box-shadow: 0 30px 40px 0 rgba(12,20,39,.1) !important;
    }
 
 /* Data tables
@@ -224,7 +332,7 @@
    ----------------------------- */
 
    .v-card {
-    border-radius: 4px !important;
+    border-radius: 6px !important;
    }
    .v-card-padding{
      padding: 20px;
@@ -235,12 +343,36 @@
    ----------------------------- */
 
    .v-list {
-    border-radius: 4px;
+    border-radius: 6px;
    }
 
    .background-none{
      background: none !important;
    }
+
+   .list-signup {
+    a {
+      border-radius: 6px;
+      border: 1px solid $lightgrey;
+      height: 69px;
+      margin-bottom: 22px;
+      padding: 0 20px;
+      background: none !important;
+    }
+    a:hover {
+      border: 1px solid $darkgrey;
+    }
+    .v-list__tile__avatar {
+      margin-right: 10px;
+    }
+    .v-list__tile__title {
+      font-weight: 500;
+      color: $darkgrey;
+    }
+
+   }
+    
+
 
 
 /* Dialog
@@ -255,11 +387,12 @@
    }
 
    .v-dialog-light {
-     color: #FFFFFF;
+     color: rgb(255, 223, 223);
    }
 
    .v-overlay--active:before {
-    opacity: .80 !important;
+    opacity: .96 !important;
+    background-color: $black !important;
     }
 
     .v-dialog--fullscreen {
@@ -268,7 +401,7 @@
         background-color: #FFFFFF !important;
       }
       .v-card{ 
-        background-color: #f4f4f4 !important;
+        background-color: $background !important;
       }
       
     }
@@ -278,17 +411,34 @@
    ----------------------------- */
    
    
-   .signupflow .v-toolbar {
-    box-shadow: 0 1px 0px 0px rgba(0, 0, 0, .1);
+   .v-toolbar {
+    box-shadow: none !important;
+    border-bottom: 1px solid #e3eaf0;
     background-color: #FFFFFF !important;
   }
 
   .v-toolbar__title {
     font-weight: 600 !important;
     }
-
-
-
+  .toolbar-left {
+    width: 30%;
+  }
+  .toolbar-center {
+    width: 40%;
+    text-align: center;
+  }
+  .toolbar-right {
+    width: 30%;
+    button {
+      float: right;
+    }
+    .v-btn {
+      float: right;
+    }
+  }
+  .toolbar-custom > .v-toolbar__content, .v-toolbar__extension {
+    padding: 0 8px;
+  }
 
 
 
@@ -298,10 +448,6 @@
 
 .ViewHeader {
   margin: 5px 0 30px 0;
-  .headline {
-    font-size: 24px !important;
-    font-weight: 500;
-  }
 }
 
 /* Auth
@@ -315,8 +461,12 @@
 /* Sign up
    ----------------------------- */
 
+.signupflow {
+  background-color: #ffffff !important;
+  height: 100%;
+}
 .signup-header {
-  padding: 40px 0;
+  padding: 30px 0 48px 0;
 }
 
 .signupflow .v-progress-linear {
@@ -325,9 +475,18 @@
   display: none;
 }
 
+
+
 /* Icons
    ----------------------------- */
   .icon-white {
     color: #ffffff !important;
+  }
+
+  /* Calendar
+   ----------------------------- */
+
+  .theme--light.v-calendar-daily {
+    background-color: #f4f4f4 !important;
   }
 

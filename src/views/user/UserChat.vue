@@ -1,7 +1,7 @@
 <template>
   <div>
-      <v-list subheader>
-          <v-subheader>Recent chat</v-subheader>
+      <v-list class="background-none" subheader>
+          <v-subheader>Channels</v-subheader>
           <v-list-tile
             v-for="item in items"
             :key="item.title"
@@ -24,8 +24,8 @@
 
         <v-divider></v-divider>
 
-        <v-list subheader>
-          <v-subheader>Previous chats</v-subheader>
+        <v-list class="background-none" subheader>
+          <v-subheader>Direct Messages</v-subheader>
 
           <v-list-tile
             v-for="item in items2"

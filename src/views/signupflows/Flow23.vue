@@ -1,20 +1,27 @@
 <template>
   <div>
-    <v-toolbar app fixed>
-      <v-btn :to="{ name: 'Flow22' }" icon>
-        <v-icon>arrow_back</v-icon>
-      </v-btn>
 
-    <v-toolbar-title >Sign up</v-toolbar-title>
-    <v-spacer></v-spacer>
+    <v-toolbar class="toolbar-custom" app fixed>
+      <v-layout align-center justify-space-between row fill-height>
 
-    <v-toolbar-items>
-      <v-btn 
-        flat
-        @click="dialog = true">Next
-        </v-btn>
-    </v-toolbar-items>
-  </v-toolbar>
+        <div class="toolbar-left"><v-btn :to="{ name: 'Flow22' }" icon>
+          <v-icon>arrow_back</v-icon>
+          </v-btn>
+        </div>
+        <div class="toolbar-center">
+          <v-toolbar-title >Sign up</v-toolbar-title>
+        </div>
+        <div class="toolbar-right">
+          <v-btn
+            color="primary"
+            depressed
+            @click="dialog = true"
+            >Next
+          </v-btn>
+        </div>
+      </v-layout>
+    </v-toolbar>
+
   <v-progress-linear
       color="primary"
       height="2"
@@ -23,62 +30,68 @@
     <v-container text-xs-center>
     <v-layout align-center justify-center row fill-height>
       <v-flex xs12 sm6 md4>
-        <div class="signup-header headline font-weight-light ">Create a location<br>for your business.</div>
+        <div class="signup-header headline1 ">Hurray, Welcome &#x1F64C;<br> Let's setup your business.</div>
         <v-form >
+          <div class="input-label">Company name</div>
           <v-text-field
             type="name"
             name="name"
             data-vv-delay="300"
             v-validate="'required|min:3'"
-            label="Company name"
             single-line
             outline
+            color="black"
             :disabled="submitting"/>
+            <div class="input-label">Address</div>
             <v-text-field
             type="name"
             name="name"
             data-vv-delay="300"
             v-validate="'required|min:3'"
-            label="Address"
             single-line
             outline
+            color="black"
             :disabled="submitting"/>
+            <div class="input-label">Zip code</div>
             <v-text-field
             type="name"
             name="name"
             data-vv-delay="300"
             v-validate="'required|min:3'"
-            label="Zip code"
             single-line
             outline
+            color="black"
             :disabled="submitting"/>
+            <div class="input-label">City</div>
             <v-text-field
             type="name"
             name="name"
             data-vv-delay="300"
             v-validate="'required|min:3'"
-            label="City"
             single-line
             outline
+            color="black"
             :disabled="submitting"/>
+            <div class="input-label">Phone</div>
             <v-text-field
             type="phone"
             name="phone"
             data-vv-delay="300"
             v-validate="'required|email'"
-            label="Phone"
             single-line
             outline
+            color="black"
             :disabled="submitting"/>
+            <div class="input-label">Email</div>
           <v-text-field
             type="email"
             name="email"
             data-vv-delay="300"
             v-validate="'required|email'"
             :error-messages="errors.collect('email')"
-            label="Email"
             single-line
             outline
+            color="black"
             :disabled="submitting"/>
       <!-- 
           <v-btn
@@ -108,11 +121,12 @@
         width="300"
       >
       <div class="text-xs-center">
-      <div class="signup-header headline font-weight-light ">Creating location<br>sit tight...</div>
+      <div class="signup-header headline1">Creating Business<br>Sit tight...</div>
     <v-progress-circular
       indeterminate
       :size="50"
-      color="red"
+      width="2"
+      color="primary"
       ></v-progress-circular>
     
       </div>

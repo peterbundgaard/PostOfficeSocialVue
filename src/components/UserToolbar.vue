@@ -1,6 +1,25 @@
 <template>
   <div>
-    <v-toolbar
+    <v-toolbar fixed class="toolbar-custom topbar" height="56">
+      <v-layout align-center justify-space-between row fill-height>
+
+        <div class="toolbar-left">
+          <v-toolbar-side-icon @click.stop="$emit('toggle')"></v-toolbar-side-icon>
+        </div>
+        <div class="toolbar-center">
+          <v-toolbar-title>
+            {{ $route.meta.title }}
+          </v-toolbar-title>
+        </div>
+        <div class="toolbar-right">
+          <v-btn icon>
+            <v-icon>add</v-icon>
+          </v-btn>
+        </div>
+      </v-layout>
+    </v-toolbar>
+
+    <!-- <v-toolbar
     height="56"
     class="topbar"
     >
@@ -13,7 +32,7 @@
         <v-icon>add</v-icon>
       </v-btn>
 
-    </v-toolbar>
+    </v-toolbar> -->
 
   </div>
 </template>

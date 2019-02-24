@@ -1,7 +1,7 @@
 <template>
   <v-snackbar
     v-model="snackbar.show"
-    color=""
+    color="primary"
     :top="false"
     :bottom="true"
     :left="false"

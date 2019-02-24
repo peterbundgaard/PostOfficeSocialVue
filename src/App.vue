@@ -2,7 +2,7 @@
   <v-app>
     <v-content>
       <v-layout align-center justify-center row fill-height v-if="routing">
-        <v-progress-circular :size="70" :width="7" color="primary" indeterminate/>
+        <v-progress-circular :size="70" :width="3" color="primary" indeterminate/>
       </v-layout>
       <snackbar/>
       <loader/>

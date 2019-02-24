@@ -1,86 +1,48 @@
 <template>
   <div>
     <v-container>
-      <v-layout wrap>
-      <v-flex
-        xs12
-        class="mb-3"
-      >
-        <v-sheet height="500">
-          <v-calendar
-            ref="calendar"
-            v-model="start"
-            :type="type"
-            :end="end"
-            color="primary"
-          ></v-calendar>
-        </v-sheet>
-      </v-flex>
-  
-      <v-flex
-        sm4
-        xs12
-        class="text-sm-left text-xs-center"
-      >
-        <v-btn @click="$refs.calendar.prev()">
-          <v-icon
-            dark
-            left
-          >
-            keyboard_arrow_left
-          </v-icon>
-          Prev
-        </v-btn>
-      </v-flex>
-      <v-flex
-        sm4
-        xs12
-        class="text-xs-center"
-      >
-        <v-select
-          v-model="type"
-          :items="typeOptions"
-          label="Type"
-        ></v-select>
-      </v-flex>
-      <v-flex
-        sm4
-        xs12
-        class="text-sm-right text-xs-center"
-      >
-        <v-btn @click="$refs.calendar.next()">
-          Next
-          <v-icon
-            right
-            dark
-          >
-            keyboard_arrow_right
-          </v-icon>
-        </v-btn>
-      </v-flex>
-    </v-layout>
+      <v-layout class="list-view">
+        <v-flex xs2 sm1 offset-sm3>
+          <div class="date-day">Fri</div>
+          <div class="date-number">22</div>
+        </v-flex>
+        <v-flex xs10 sm5>
+          <post/>
+        </v-flex>
+      </v-layout>
     </v-container>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import Post from '@/components/post'
 
 export default {
   name: 'usercalendar',
   computed: mapState(['currentUser']),
-  data: () => ({
-      type: 'week',
-      start: '2019-01-01',
-      end: '2019-01-06',
-      typeOptions: [
-        { text: 'Day', value: 'day' },
-        { text: '4 Day', value: '4day' },
-        { text: 'Week', value: 'week' },
-        { text: 'Month', value: 'month' },
-        { text: 'Custom Daily', value: 'custom-daily' },
-        { text: 'Custom Weekly', value: 'custom-weekly' }
-      ]
-    })
+  components: {
+    Post
+  }
 }
 </script>
+
+<style lang="scss" scoped>
+  .list-view {
+    .date-day {
+      font-size: 14px;
+      font-weight: 600 !important;
+      color: #637178;
+    }
+    .date-number {
+      font-size: 40px;
+      font-weight: 500 !important;
+      color: #2d2f39;
+      line-height: 40px;
+      @media only screen and (max-width: 600px) {
+        font-size: 36px;
+      }
+    }
+  }
+</style>
+

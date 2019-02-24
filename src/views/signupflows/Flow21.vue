@@ -2,43 +2,38 @@
   <v-container text-xs-center>
     <v-layout align-center justify-center row fill-height>
       <v-flex xs12 sm6 md4>
-        <img src="/static/img/logo/160.svg" alt="Logo" class="mb-2 logo"/>
-        <v-card
-        class="Introbox">
-        <v-avatar size="90">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/postofficevue.appspot.com/o/49949379_1072520496263910_3913539685758009344_n.png?alt=media&token=d5810d88-caa2-4221-9e62-1975f5692979"
-            alt="Føtex"
-          >
-        </v-avatar>
-        <p>Sign up to Føtex<br>and start creating!</p>
+        <div><img src="@/assets/logoMark.svg" alt="Logo" class="logoMark"/></div>
+        <div><img src="@/assets/logoLarge.svg" alt="Logo" class="logoLarge"/></div>
+        <div class="logoTitle">Post Office helps you create<br>better content faster.</div>
+        <div class="connectToTitle"><img src="@/assets/connectIcon.svg" alt="">
+          Føtex</div>
       <form>
         <v-btn
           type="submit"
-          class="mb-3"
+          class="mb-3 large-btn"
           color="primary"
           block
           large
           depressed
           :to="{ name: 'Flow22' }"
-          :disabled="submitting">Create user</v-btn>
+          :disabled="submitting">Create account</v-btn>
         <v-btn
-          color="indigo"
-          class="mb-3"
+          color="#3A589B"
+          class="mb-3 large-btn"
           :dark="!submitting"
           block
           large
           depressed
           :to="{ name: 'SignUp' }"
-          :disabled="submitting">Signup with facebook</v-btn>
+          :disabled="submitting"><img class="btn-icon-Left" src="@/assets/facebookSmall.svg" alt="fbLogo"/>Continue with Facebook</v-btn>
           <v-btn
+          class="mb-3 flat-btn"
           block
           small
           flat
           :to="{ name: 'Login' }"
           :disabled="submitting">Already a user? Log in</v-btn>
       </form>
-      </v-card>
       </v-flex>
     </v-layout>
   </v-container>
@@ -52,19 +47,29 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .Introbox {
-      margin-top: 40px;
-      height: 360px;
-      padding: 20px;
-      img {
-          position: relative;
-          top: -60px;
-      }
-      p{
-          position: relative;
-          top: -30px;
-          font-size: 18px;
-          font-weight: 100;
-      }
+  .logoMark{
+    margin-top: 50px;
+  }
+  .logoLarge{
+  padding: 40px 0 30px 0;
+  }
+  .logoTitle {
+    font-size: 20px;
+    font-weight: 500;
+    color: #818E94;
+    line-height: 29px;
+    margin-bottom: 48px;
+  }
+  .connectToTitle {
+    img {
+      margin-right: 4px;
+      position: relative;
+      top: 1px;
+    }
+    font-size: 16px;
+    font-weight: 600;
+    color: #818E94;
+    line-height: 29px;
+    margin-bottom: 44px;
   }
 </style>

@@ -1,19 +1,26 @@
 <template>
   <div>
-    <v-toolbar app fixed>
-      <v-btn :to="{ name: 'Flow21' }" icon>
-        <v-icon>arrow_back</v-icon>
-      </v-btn>
-    <v-toolbar-title >Sign up</v-toolbar-title>
-    <v-spacer></v-spacer>
-    <v-toolbar-items>
-      
-      <v-btn 
-        flat
-        @click="dialog = true"
-        >Next</v-btn>
-    </v-toolbar-items>
-  </v-toolbar>
+    <v-toolbar class="toolbar-custom" app fixed>
+      <v-layout align-center justify-space-between row fill-height>
+
+        <div class="toolbar-left"><v-btn :to="{ name: 'Flow21' }" icon>
+          <v-icon>arrow_back</v-icon>
+          </v-btn>
+        </div>
+        <div class="toolbar-center">
+          <v-toolbar-title >Sign up</v-toolbar-title>
+        </div>
+        <div class="toolbar-right">
+          <v-btn
+            color="primary"
+            depressed
+            @click="dialog = true"
+            >Next
+          </v-btn>
+        </div>
+      </v-layout>
+    </v-toolbar>
+
   <v-progress-linear
       color="primary"
       height="2"
@@ -24,46 +31,58 @@
     <v-container text-xs-center>
     <v-layout align-center justify-center row fill-height>
       <v-flex xs12 sm6 md4>
-        <div class="signup-header headline font-weight-light ">Create a profile to get started!</div>
+        <!-- <div class="dotstyle dotstyle-fillup">
+        <ul>
+          <li class="current"><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div> -->
+        <div class="signup-header headline1 ">Here we go! &#x1F44B;<br>Create a profile to get started!</div>
     <v-form >
+    <div class="input-label">Name</div>
     <v-text-field
       type="name"
       name="name"
       data-vv-delay="300"
-      v-validate="'required|min:3'"
-      label="Name"
+      v-validate="'required|min:3'" 
       single-line
       outline
+      color="black"
       :disabled="submitting"/>
+    <div class="input-label">Email</div>
     <v-text-field
       type="email"
       name="email"
       data-vv-delay="300"
       v-validate="'required|email'"
       :error-messages="errors.collect('email')"
-      label="Email"
       single-line
       outline
+      color="black"
       :disabled="submitting"/>
+    <div class="input-label">Password</div>
     <v-text-field
       type="password"
       name="password"
       data-vv-delay="300"
       v-validate="'required|min:6|confirmed:password_confirmation'"
       :error-messages="errors.collect('password')"
-      label="Password"
       single-line
       outline
+      color="black"
       :disabled="submitting"/>
+    <div class="input-label">Confirm the password</div>
     <v-text-field
       type="password"
       name="password_confirmation"
       data-vv-delay="300"
       v-validate="'required|min:6'"
-      label="Confirm the password"
       ref="password_confirmation"
       single-line
       outline
+      color="black"
       :disabled="submitting"/>
 
       <v-checkbox
@@ -71,8 +90,8 @@
       value="1"
       data-vv-name="remember"
       data-vv-delay="300"
-      label="Accept terms and privacy policy"
-      color="primary"
+      label="I would like to hear about Post Office updates and special offers."
+      color="black"
       :disabled="submitting"/>
       
       <v-checkbox
@@ -80,26 +99,9 @@
       value="1"
       data-vv-name="remember"
       data-vv-delay="300"
-      label="Send me news and info about product updates"
-      color="primary"
+      label="I accept the Terms of use and subscription*"
+      color="black"
       :disabled="submitting"/>
-<!-- 
-    <v-btn
-      type="submit"
-      color="primary"
-      block
-      large
-      depressed
-      class="mb-3"
-      :disabled="submitting">REGISTER</v-btn>
-    <v-btn
-      :to="{ name: 'Login' }"
-      color="indigo"
-      :dark="!submitting"
-      block
-      large
-      depressed
-      :disabled="submitting">ALREADY HAVE AN ACCOUNT?</v-btn> -->
   </v-form>
   
   </v-flex>
@@ -112,11 +114,12 @@
         width="300"
       >
       <div class="text-xs-center">
-      <div class="signup-header headline font-weight-light ">Creating Profile<br>Hang on...</div>
+      <div class="signup-header headline1">Creating Profile<br>Hang on...</div>
     <v-progress-circular
       indeterminate
       :size="50"
-      color="red"
+      width="2"
+      color="primary"
     ></v-progress-circular>
     
   </div>
@@ -169,5 +172,43 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+  
+  .dotstyle ul {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
+  }
+
+  .dotstyle li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0 4px;
+    width: 4px;
+    height: 4px;
+    cursor: pointer;
+  }
+
+  .dotstyle li a {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 50%;
+    background-color: #fff;
+    background-color: #d6dcdf;
+    text-indent: -999em;
+    cursor: pointer; /* make the text accessible to screen readers */
+    position: absolute;
+  }
+
+  .dotstyle .current a {
+    background-color: #1089f9;
+  }
 
 </style>

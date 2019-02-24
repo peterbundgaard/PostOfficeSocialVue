@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="user-view">
     <user-drawer/>
     <router-view/>
   </div>
@@ -15,3 +15,9 @@ export default {
   }
 }
 </script>
+
+
+
+<style lang="scss" scoped>
+  
+</style>
