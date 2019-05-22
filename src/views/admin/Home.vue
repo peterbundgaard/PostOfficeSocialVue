@@ -1,42 +1,150 @@
 <template>
   <div>
-    <v-container>
-      <!-- <div class="ViewHeader">
-        <div class="headline">Hi, {{ currentUser.displayName }}</div>
+    <v-container >
+      <div class="ViewHeader">
+        <div class="headline2">Hi, {{ currentUser.displayName }}</div>
         <div class="body-1">Her kan man skrive en tagline</div>
-      </div> -->
-      <v-card
-    class="mt-3 mx-auto"
-    max-width="400"
-  >
-    <v-sheet
-      class="v-sheet--offset mx-auto"
-      color="cyan"
-      elevation="12"
-      max-width="calc(100% - 32px)"
-    >
-      <v-sparkline
-        :labels="labels"
-        :value="value"
-        color="white"
-        line-width="2"
-        padding="16"
-      ></v-sparkline>
-    </v-sheet>
+      </div>
 
-    <v-card-text class="pt-0">
-      <div class="title font-weight-light mb-2">User Registrations</div>
-      <div class="subheading font-weight-light grey--text">Last Campaign Performance</div>
-      <v-divider class="my-2"></v-divider>
-      <v-icon
-        class="mr-2"
-        small
-      >
-        mdi-clock
-      </v-icon>
-      <span class="caption grey--text font-weight-light">last registration 26 minutes ago</span>
-    </v-card-text>
-  </v-card>
+      <v-container fluid grid-list-lg>
+        <v-layout row wrap>
+          <v-flex xs12 sm6 md4 mb-4>
+            <v-card 
+              pa-3
+              flat 
+              hover
+            >
+              <v-card-text>
+                
+                <div class="headline3 font-dark mt-2 ml-3">Posts</div>
+                <div class="caption font-grey ml-3">1. january - 28. january</div>
+                <div class="spot ml-3 mt-2">240</div>
+              </v-card-text>
+              <v-sparkline
+                  :value="value"
+                  color="#1089f9"
+                  line-width="2.5"
+                  padding="20"
+                   auto-draw="true"
+                  auto-draw-duration="1500"
+                ></v-sparkline>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md4 mb-4>
+            <v-card 
+              pa-3
+              flat 
+              hover
+            >
+              <v-card-text>
+                
+                <div class="headline3 font-dark mt-2 ml-3">Impressions</div>
+                <div class="caption font-grey ml-3">1. january - 28. january</div>
+                <div class="spot ml-3 mt-2">388.976</div>
+              </v-card-text>
+              <v-sparkline
+                  :value="value"
+                  color="#1089f9"
+                  line-width="2.5"
+                  padding="20"
+                   auto-draw="true"
+                  auto-draw-duration="1500"
+                ></v-sparkline>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md4 mb-4>
+            <v-card 
+              pa-3
+              flat 
+              hover
+            >
+              <v-card-text>
+                
+                <div class="headline3 font-dark mt-2 ml-3">Engagement</div>
+                <div class="caption font-grey ml-3">1. january - 28. january</div>
+                <div class="spot ml-3 mt-2">46.876</div>
+              </v-card-text>
+              <v-sparkline
+                  :value="value"
+                  color="#1089f9"
+                  line-width="2.5"
+                  padding="20"
+                   auto-draw="true"
+                  auto-draw-duration="1500"
+                ></v-sparkline>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md4 mb-4>
+            <v-card 
+              pa-3
+              flat 
+              hover
+            >
+              <v-card-text>
+                
+                <div class="headline3 font-dark mt-2 ml-3">Content type</div>
+                <div class="caption font-grey ml-3">1. january - 28. january</div>
+                <div class="spot ml-3 mt-2">240</div>
+              </v-card-text>
+              <v-sparkline
+                  :value="value"
+                  type="bars"
+                  color="#1089f9"
+                  line-width="20"
+                   auto-draw="true"
+                  auto-draw-duration="1500"
+                ></v-sparkline>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md4 mb-4>
+            <v-card 
+              pa-3
+              flat 
+              hover
+            >
+              <v-card-text>
+                
+                <div class="headline3 font-dark mt-2 ml-3">Active users</div>
+                <div class="caption font-grey ml-3">1. january - 28. january</div>
+                <div class="spot ml-3 mt-2">60%</div>
+              </v-card-text>
+              <v-sparkline
+                  :value="value"
+                  color="#1089f9"
+                  line-width="2.5"
+                  padding="20"
+                   auto-draw="true"
+                  auto-draw-duration="1500"
+                ></v-sparkline>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md4 mb-4>
+            <v-card 
+              pa-3
+              flat 
+              hover
+            >
+              <v-card-text>
+                
+                <div class="headline3 font-dark mt-2 ml-3">Avg. post/location</div>
+                <div class="caption font-grey ml-3">1. january - 28. january</div>
+                <div class="spot ml-3 mt-2">19</div>
+              </v-card-text>
+              <v-sparkline
+                  :value="value"
+                  color="#1089f9"
+                  line-width="2.5"
+                  padding="20"
+                   auto-draw="true"
+                  auto-draw-duration="1500"
+                ></v-sparkline>
+            </v-card>
+          </v-flex>
+          
+
+        </v-layout>
+      </v-container>
+      
     </v-container>
   </div>
 </template>
@@ -66,7 +174,7 @@ export default {
         '9pm'
       ],
       value: [
-        200,
+        310,
         675,
         410,
         390,

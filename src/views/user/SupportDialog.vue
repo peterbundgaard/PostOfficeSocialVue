@@ -2,8 +2,8 @@
   <v-layout row justify-center>
     <v-dialog v-model="confirmVisiblility" fullscreen hide-overlay transition="dialog-bottom-transition">
       <v-card>
-        <v-toolbar dark color="primary">
-          <v-btn icon dark @click="confirmClose">
+        <v-toolbar>
+          <v-btn icon @click="confirmClose">
             <v-icon>close</v-icon>
           </v-btn>
           <v-toolbar-title>Support</v-toolbar-title>

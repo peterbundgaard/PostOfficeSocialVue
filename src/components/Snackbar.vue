@@ -1,13 +1,13 @@
 <template>
   <v-snackbar
+    class="snack-style"
     v-model="snackbar.show"
-    color="primary"
     :top="false"
     :bottom="true"
     :left="false"
     :right="true"
     :multi-line="false"
-    :timeout="5000" :vertical="false">
+    :timeout="3000" :vertical="false">
     {{ snackbar.text }}
     <!-- <v-icon class="icon-white">check</v-icon> -->
     <v-btn
@@ -26,3 +26,8 @@ export default {
   methods: mapMutations(['HIDE_SNACKBAR'])
 }
 </script>
+
+
+<style lang="scss" scoped>
+  
+</style>

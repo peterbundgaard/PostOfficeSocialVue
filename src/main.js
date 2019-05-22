@@ -23,7 +23,10 @@ Vue.use(Vuetify, {
     "warning": "#FB8C00",
     "black": "#2d2f39",
     "darkgrey": "#637178",
-    "lightgrey": "#d6dcdf"
+    "grey": "#afb8bc",
+    "lightgrey": "#d6dcdf",
+    "background": "#ffffff",
+    "backgrounddark": "#f4f7fb"
   }
 })
 Vue.use(VeeValidate)

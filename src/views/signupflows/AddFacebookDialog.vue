@@ -2,8 +2,8 @@
   <v-layout row justify-center>
     <v-dialog v-model="confirmVisiblility" fullscreen hide-overlay transition="dialog-bottom-transition">
       <v-card>
-        <v-toolbar light color="primary">
-          <v-btn icon light @click="confirmClose">
+        <v-toolbar >
+          <v-btn icon @click="confirmClose">
             <v-icon>close</v-icon>
           </v-btn>
           <v-toolbar-title>Choose page</v-toolbar-title>

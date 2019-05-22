@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="admin-view">
     <navigation-drawer/>
     <router-view/>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="admin-calendar">
     <v-container>
       <v-btn
           class="btnLeft" 
@@ -18,13 +18,13 @@
           <v-icon dark>keyboard_arrow_right</v-icon>
         </v-btn>
     
-      <v-layout wrap>
+      <v-layout class="ViewHeader" wrap>
         <v-flex
         sm4
         xs12
         class="text-sm-left text-xs-center"
       >
-        <div class="headline">Februar</div>
+        <div class="headline2">Februar</div>
       </v-flex>
       <v-flex
         sm4
@@ -34,29 +34,31 @@
       </v-flex>
 
       <v-flex
-        sm2
+        sm4
         xs12
-        class="text-sm-right text-xs-center"
+        class="text-sm-right text-xs-center center"
       >
-        <v-select
+        <div class="inline-action">
+          <v-select
           v-model="type"
           :items="typeOptions"
           label="Solo field"
           solo
+          flat=""
+          outline
         ></v-select>
+        </div>
+        <div class="inline-action">
+          <v-btn block class="large-btn no-margin-btn" depressed color="primary" outline large>New Post</v-btn>
+        </div>
+        
+
       </v-flex>
 
+      
+    </v-layout>
+    <v-layout row>
       <v-flex
-        sm2
-        xs12
-        class="text-sm-right text-xs-center"
-      >
-        <v-btn large>New Post</v-btn>
-          
-      </v-flex>
-      <v-flex
-        xs12
-        class="mb-3"
       >
         <v-sheet height="1100">
           <v-calendar
@@ -78,8 +80,8 @@ export default {
   name: 'calendar',
   data: () => ({
       type: 'week',
-      start: '2019-02-17',
-      end: '2019-02-23',
+      start: '2019-02-24',
+      end: '2019-03-02',
       typeOptions: [
         { text: 'Day', value: 'day' },
         { text: '4 Day', value: '4day' },
@@ -94,34 +96,37 @@ export default {
 
 <style lang="scss" scoped>
 
-.btnLeft {
+.admin-calendar {
+  .btnLeft {
   position: fixed;
   z-index: 1;
   top: 400px;
   right: 0px;
   left: 224px;
   opacity: 0.4;
-}
-.btnRight {
-  position: fixed;
-  z-index: 1;
-  top: 400px;
-  right: 0px;
-  opacity: 0.4;
-}
-
-.btnLeft:hover {
-  opacity: 1;
-}
-
-@media (max-width: 959px) { 
-  .btnLeft {
-  left: 10px;
   }
- }
+  .btnRight {
+    position: fixed;
+    z-index: 1;
+    top: 400px;
+    right: 0px;
+    opacity: 0.4;
+  }
 
-.btnRight:hover {
-  opacity: 1;
+  .btnLeft:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 959px) { 
+    .btnLeft {
+    left: 10px;
+    }
+  }
+
+  .btnRight:hover {
+    opacity: 1;
+  }
+
 }
 
 </style>

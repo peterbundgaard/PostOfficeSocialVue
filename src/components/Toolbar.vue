@@ -26,7 +26,7 @@
             </v-avatar>
             <v-list-tile class="hidden-xs-only">
             <v-list-tile-content>
-              <v-list-tile-title class="body-2 font-weight-medium text-capitalize">{{ currentUser.displayName }}</v-list-tile-title>
+              <v-list-tile-title class="body-2 font-weight-semibold text-capitalize">{{ currentUser.displayName }}</v-list-tile-title>
               <v-list-tile-sub-title class="caption font-weight-regular text-capitalize">Føtex</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
@@ -167,6 +167,7 @@ export default {
 
 .v-toolbar__title {
   margin-left: 0px;
+  margin-top: 8px;
 }
 .topbar .v-toolbar__content{
   padding: 0px;

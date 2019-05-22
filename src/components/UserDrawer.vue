@@ -26,7 +26,8 @@
       <v-list>
         <v-list-tile @click="drawer = !drawer" ripple exact>
           <v-list-tile-action>
-            <v-icon>view_stream</v-icon>
+            <img src="@/assets/listViewIcon.svg" alt="">
+            <!-- <v-icon>view_stream</v-icon> -->
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>List</v-list-tile-title>
@@ -34,7 +35,7 @@
         </v-list-tile>
         <v-list-tile @click="drawer = !drawer" ripple>
           <v-list-tile-action>
-            <v-icon>view_week</v-icon>
+            <img src="@/assets/weekViewIcon.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Week</v-list-tile-title>
@@ -48,7 +49,7 @@
       <v-list>
         <v-list-tile @click="confirmGuidelinesDialog=true" ripple exact>
           <v-list-tile-action>
-            <v-icon>school</v-icon>
+            <img src="@/assets/guidelinesIcon.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Guidelines</v-list-tile-title>
@@ -59,7 +60,7 @@
 
         <v-list-tile @click="confirmSupportDialog=true" ripple>
           <v-list-tile-action>
-            <v-icon>phone</v-icon>
+            <img src="@/assets/supportIcon.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Support</v-list-tile-title>
@@ -70,7 +71,7 @@
 
         <v-list-tile @click="confirmProfileDialog=true" ripple>
           <v-list-tile-action>
-            <v-icon>person</v-icon>
+            <img src="@/assets/profileIcon.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Profile</v-list-tile-title>
@@ -86,7 +87,7 @@
         <v-list>
           <v-list-tile :to="{ name: 'Home' }" ripple exact>
           <v-list-tile-action>
-            <v-icon>cached</v-icon>
+            <img src="@/assets/switchIcon.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Switch to admin</v-list-tile-title>
@@ -94,7 +95,7 @@
         </v-list-tile>
           <v-list-tile :to="{ name: 'Settings' }" ripple>
             <v-list-tile-action>
-              <v-icon>exit_to_app</v-icon>
+              <img src="@/assets/logoutIcon.svg" alt="">
             </v-list-tile-action>
             <v-list-tile-content>
               <v-list-tile-title>Logout</v-list-tile-title>

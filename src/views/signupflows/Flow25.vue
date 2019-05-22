@@ -34,7 +34,7 @@
       <v-flex xs12 sm6 md4>
         <!-- <div class="signup-header headline font-weight-light ">Post Office is funnier with your colleagues around. Invite them now.</div> -->
         <div class="signup-header headline1">Last step &#x1F607; Invite some colleagues to help you do the work.</div>
-  <v-form >
+  <v-form class="x-large-input">
     <div class="input-label">Email</div>
     <v-text-field
       type="email"

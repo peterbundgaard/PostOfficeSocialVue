@@ -1,9 +1,9 @@
 <template>
   <v-layout row justify-center>
     <v-dialog v-model="confirmVisiblility" fullscreen hide-overlay transition="dialog-bottom-transition">
-      <v-card>
-        <v-toolbar light color="primary">
-          <v-btn icon light @click="confirmClose">
+      <v-card class="dialog-dark-background">
+        <v-toolbar>
+          <v-btn icon  @click="confirmClose">
             <v-icon>close</v-icon>
           </v-btn>
           <v-toolbar-title>Change Location</v-toolbar-title>
@@ -35,7 +35,7 @@
           </v-list-tile>
         </v-list>
 
-        <v-divider></v-divider>
+        <!-- <v-divider></v-divider> -->
 
         <v-list class="background-none" subheader>
           <v-subheader>Other locations</v-subheader>

@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="elevation-custom-2">
+    class="elevation-custom-10 post-focus">
     <v-card-title primary-title>
         <v-layout row>
           <div class="post-avatar">
@@ -57,25 +57,11 @@
           </v-flex>
         </v-layout>
     </v-card-title>
+    <v-img
+        :src="require('@/assets/img/føtex1.jpg')"
+        contain
+    ></v-img>
     
-    <v-layout row>
-      <v-flex
-      class="post-image"
-      v-for="img in imgs"
-      :key="img.image"
-      wrap >
-        <v-img aspect-ratio="1.2" :src="img.image"></v-img>
-      </v-flex>
-    </v-layout>
-    <v-layout row>
-      <v-flex
-      v-for="img in imgs2"
-      :key="img.image"
-      wrap >
-        <v-img aspect-ratio="1.2" :src="img.image"></v-img>
-      </v-flex>
-    </v-layout>
-
     <v-card-actions style="height: 60px; position: relative">
       
       <v-btn
@@ -87,7 +73,7 @@
         right
         color="white"
       >
-        <img src="@/assets/scheduleIconActive.svg" alt="">
+        <img src="@/assets/scheduleIcon.svg" alt="">
       </v-btn>
       <!-- <v-btn flat icon color="orange">Delete</v-btn>
       <v-btn flat icon color="orange">Edit</v-btn> -->
@@ -98,20 +84,11 @@
 <script>
 
 export default {
-  name: 'post',
+  name: 'post-single-image',
   data: () => ({
       items: [
         { title: 'Delete', icon: 'delete_outline' },
         { title: 'Copy', icon: 'file_copy' }
-      ],
-      imgs: [
-        { image: require('@/assets/img/føtex2.jpg') },
-        { image: require('@/assets/img/føtex3.jpg') }
-      ],
-      imgs2: [
-        { image: require('@/assets/img/føtex4.jpg') },
-        { image: require('@/assets/img/føtex5.jpg') },
-        { image: require('@/assets/img/føtex6.jpg') }
       ]
     })
 }
@@ -119,22 +96,8 @@ export default {
 
 <style lang="scss" scoped>
   .list-view {
-    .post-image{
-        /* padding: 2px !important;
-        :first-child {
-          padding-left: 0px !important;
-        } */
-    }
-    .layout.row {
-      div {
-        padding: 1px !important;
-      }
-      :first-child {
-          padding-left: 0px !important;
-        }
-      :last-child {
-          padding-right: 0px !important;
-        }
+    .flex{
+        padding: 0px !important;
     }
     .post-avatar {
         width: 54px;
@@ -159,6 +122,11 @@ export default {
           }
         }
     }
+    .post-brand-name {
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      color: #2d2f39 !important;
+    }
     .post-btn-more {
         .v-icon {
           color: #d6dcdf;
@@ -167,11 +135,6 @@ export default {
         position: relative;
         top: -6px;
         right: 5px;
-    }
-    .post-brand-name {
-      font-size: 16px !important;
-      font-weight: 600 !important;
-      color: #2d2f39 !important;
     }
     .post-caption {
       margin-top: 10px;

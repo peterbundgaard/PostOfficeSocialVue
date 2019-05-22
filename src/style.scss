@@ -139,7 +139,7 @@
 }
 
 $primary: #1089f9;  /* #F44336 #F44336, #FE3B2C */
-$secondary: #000000;
+$secondary: #2d2f39;
 $accent: #82B1FF;
 $error: #FF5252;
 $info: #2196F3;
@@ -149,7 +149,7 @@ $white: #FFFFFF;
 $black: #2d2f39;
 $darkgrey: #637178;
 $grey: #afb8bc;
-$lightgrey: #d6dcdf;
+$lightgrey: #d6dcdf; 
 $background: #ffffff;
 $backgrounddark: #f4f7fb;
 
@@ -163,9 +163,23 @@ $backgrounddark: #f4f7fb;
    }
    .user-view {
       padding-top: 60px;
+      padding-bottom: 60px;
       height: 100%;
       background-color: $backgrounddark;
   }
+  .admin-view {
+    background-color: $backgrounddark;
+    height: 100%;
+  }
+
+  .float-right {
+    float: right !important;
+  }
+
+  .float-left {
+    float: left !important;
+  }
+
 
 /* Text
    ----------------------------- */
@@ -183,14 +197,78 @@ $backgrounddark: #f4f7fb;
     text-align: center;
    }
 
+   .spot {
+    font-size: 44px;
+    font-weight: 400;
+    color: $black;
+   }
+
    .headline1 {
      font-size: 28px !important;
      font-weight: 500 !important;
    }
 
+   .headline2 {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    color: $black !important;
+  }
+
+  .headline3 {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: $black !important;
+  }
+
    .title{
      font-weight: 300!important;
    }
+   .v-list__tile {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: $black !important;
+   }
+
+   .v-subheader {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: $black !important;
+   }
+
+   .v-subheader-more {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: $grey !important;
+    padding: 0 16px 0 16px;
+    height: 48px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    text-transform: uppercase;
+   }
+
+   .subheading {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: $grey !important;
+   }
+
+   .body-2 {
+    font-weight: 600px !important;
+   }
+
+   .font-weight-semibold {
+    font-weight: 600px !important;
+   }
+
+   .font-dark {
+    color: $black !important;
+   }
+
+   .font-grey {
+    color: $grey !important;
+   }
+
 
    /* Navigation
    ----------------------------- */
@@ -216,6 +294,26 @@ $backgrounddark: #f4f7fb;
      }
    }
 
+   .v-navigation-drawer > .v-list:not(.v-list--dense) .v-list__tile {
+    font-size: 17px !important;
+    color: $black;
+    font-weight: 500 !important;
+   }
+
+   .v-navigation-drawer {
+    .v-list__tile__action {
+      padding-left: 8px;
+     }
+    .v-list__tile__title {
+      padding-left: 10px !important;
+    }
+
+   }
+
+   .theme--light.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
+    background-color: #e3eaf0 !important;
+}
+   
 
   /* Menus
    ----------------------------- */
@@ -243,6 +341,18 @@ $backgrounddark: #f4f7fb;
      height: 52px !important;
    }
 
+   .x-large-btn {
+    height: 64px !important;
+  }
+    .no-margin-btn {
+      margin: 0 !important;
+    }
+  
+  .inline-action {
+    display: table-cell;
+    padding-left: 8px;
+  }
+
    /* Input
    ----------------------------- */
 
@@ -250,12 +360,16 @@ $backgrounddark: #f4f7fb;
      font-weight: 500;
   }
 
-   .theme--light .v-text-field--outline .v-input__slot {
+   .v-text-field--outline .v-input__slot {
     border: 1px solid $lightgrey !important;
     background-color: $background !important;
     border-radius: 6px !important;
-    min-height: 64px !important;
+    min-height: 52px !important;
     padding: 0 20px !important;
+   }
+
+   .x-large-input .v-text-field--outline .v-input__slot {
+    min-height: 64px !important;
    }
 
    .v-text-field--outline.v-text-field--single-line input {
@@ -266,7 +380,7 @@ $backgrounddark: #f4f7fb;
      border: 1px solid $darkgrey !important;
    }
 
-  .v-text-field--outline {
+   x-large-input .v-text-field--outline {
     height: 100px;
     margin-top: 3px !important;
   }
@@ -296,10 +410,27 @@ $backgrounddark: #f4f7fb;
     .black--text {
       color: $black !important;
       }
-    .v-input__control {
-      height: 44px;
-    }
    }
+
+   .v-snack--bottom {
+    padding: 0 10px 12px 10px;
+    }
+    .snack-style .v-snack__wrapper {
+      background-color: rgba(16, 137, 249, 0.90) !important;
+      border-radius: 6px;
+      border: 1px solid rgba(16, 137, 249, 1) !important;
+      -webkit-box-shadow: 0 30px 40px 0 rgba(12,20,39,.1) !important;
+      box-shadow: 0 30px 40px 0 rgba(12,20,39,.1) !important;
+      .v-snack__content {
+        font-size: 14px !important;
+        font-weight: 500 !important;
+      }
+    }
+
+    .margin-top-select {
+      position: relative;
+      top: 6px;
+    }
 
 /* elevation
    ----------------------------- */
@@ -310,21 +441,32 @@ $backgrounddark: #f4f7fb;
 
    }
 
+   .elevation-custom-2 {
+    /* -webkit-box-shadow: 0 1px 3px 0 rgba(12,20,39,.1) !important;
+    box-shadow: 0 1px 3px 0 rgba(12,20,39,.1) !important; */
+    box-shadow: none !important;
+   }
+
    .elevation-custom-10 {
     -webkit-box-shadow: 0 30px 40px 0 rgba(12,20,39,.1) !important;
     box-shadow: 0 30px 40px 0 rgba(12,20,39,.1) !important;
+   }
+
+   .post-focus {
+    width: 104%;
+    margin-left: -2%;
    }
 
 /* Data tables
    ----------------------------- */
    
    .dataTableRounded {
-    border-radius: 4px;
+    border-radius: 6px;
       .v-table {
-        border-radius: 4px;
+        border-radius: 6px;
       }
       .v-datatable__actions {
-        border-radius: 0 0 4px 4px;
+        border-radius: 0 0 6px 6px;
       }
    }
 
@@ -336,6 +478,15 @@ $backgrounddark: #f4f7fb;
    }
    .v-card-padding{
      padding: 20px;
+   }
+
+   .v-card--hover:hover {
+    box-shadow: 0 14px 20px 0 rgba(12,20,39,.1) !important;
+   /*  box-shadow: 0 10px 18px rgba(8,42,62,.05) !important; */
+   }
+
+   .v-card-content-box {
+     
    }
 
    
@@ -403,6 +554,9 @@ $backgrounddark: #f4f7fb;
       .v-card{ 
         background-color: $background !important;
       }
+      .dialog-dark-background {
+        background-color: $backgrounddark !important;
+      }
       
     }
 
@@ -447,7 +601,7 @@ $backgrounddark: #f4f7fb;
    ----------------------------- */
 
 .ViewHeader {
-  margin: 5px 0 30px 0;
+  margin: 28px 0 30px 0;
 }
 
 /* Auth
@@ -487,6 +641,6 @@ $backgrounddark: #f4f7fb;
    ----------------------------- */
 
   .theme--light.v-calendar-daily {
-    background-color: #f4f4f4 !important;
+    background-color: $backgrounddark !important;
   }
 

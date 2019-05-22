@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="59px" viewBox="0 0 59 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>scheduleIconActive</title>
+    <desc>Created with Sketch.</desc>
+    <g id="App-flow-2018/2019" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="scheduleIconActive" transform="translate(2.000000, 2.000000)" stroke-width="3">
+            <circle id="Oval-3-Copy-8" stroke="#1089F9" fill="#1089F9" cx="27.5" cy="27.5" r="27.5"></circle>
+            <polyline id="Rectangle-8-Copy-2" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(28.750000, 26.981041) rotate(-270.000000) translate(-28.750000, -26.981041) " points="21.768959 17.231041 35.731041 30.9358545 29.768959 36.731041"></polyline>
+        </g>
+    </g>
+</svg>

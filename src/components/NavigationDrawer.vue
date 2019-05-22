@@ -14,7 +14,7 @@
       <v-list>
         <v-list-tile :to="{ name: 'Home' }" ripple exact>
           <v-list-tile-action>
-            <v-icon>home</v-icon>
+            <img src="@/assets/dashboardIcon.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Dashboard</v-list-tile-title>
@@ -22,7 +22,7 @@
         </v-list-tile>
         <v-list-tile :to="{ name: 'Calendar' }" ripple>
           <v-list-tile-action>
-            <v-icon>calendar_today</v-icon>
+            <img src="@/assets/calendarIconAdmin.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Calendar</v-list-tile-title>
@@ -30,7 +30,7 @@
         </v-list-tile>
         <v-list-tile :to="{ name: 'Templates' }" ripple>
           <v-list-tile-action>
-            <v-icon>filter_none</v-icon>
+            <img src="@/assets/templateIconAdmin.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Templates</v-list-tile-title>
@@ -38,7 +38,7 @@
         </v-list-tile>
         <v-list-tile :to="{ name: 'Editor' }" ripple>
           <v-list-tile-action>
-            <v-icon>filter_vintage</v-icon>
+            <img src="@/assets/editorIconAdmin.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Editor</v-list-tile-title>
@@ -46,7 +46,7 @@
         </v-list-tile>
         <v-list-tile :to="{ name: 'Campaigns' }" ripple>
           <v-list-tile-action>
-            <v-icon>my_location</v-icon>
+            <img src="@/assets/campaignIconAdmin.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Campaigns</v-list-tile-title>
@@ -54,15 +54,49 @@
         </v-list-tile>
         <v-list-tile :to="{ name: 'Insights' }" ripple>
           <v-list-tile-action>
-            <v-icon>equalizer</v-icon>
+            <img src="@/assets/insightsIconAdmin.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Insights</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+
+<!--         <v-list-group
+        prepend-icon="account_circle"
+        value="Collapse"
+        no-action
+        
+      >
+        <template v-slot:header>
+          <v-list-tile>
+            <v-list-tile-title>Insights</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        
+        <v-list-tile :to="{ name: 'Insights' }" ripple>
+          <v-list-tile-action>
+            <img src="@/assets/insightsIconAdmin.svg" alt="">
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Insights 1</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+
+        <v-list-tile :to="{ name: 'Insights' }" ripple>
+          <v-list-tile-action>
+            <img src="@/assets/insightsIconAdmin.svg" alt="">
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Insights 2</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+
+
+      </v-list-group> -->
+
         <v-list-tile :to="{ name: 'Users' }" ripple>
           <v-list-tile-action>
-            <v-icon>group</v-icon>
+            <img src="@/assets/userIconAdmin.svg" alt="">
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Users</v-list-tile-title>
@@ -134,3 +168,48 @@ export default {
   }
 }
 </script>
+
+
+
+<style scoped>
+
+.v-list__tile__title {
+  color: #afb8bc !important;
+}
+
+.v-list__tile--active .v-list__tile__title  {
+  color: #2d2f39 !important;
+}
+
+.v-list__tile__action  {
+  opacity: 0.4;
+}
+
+.v-list__tile--active .v-list__tile__action  {
+  opacity: 1;
+}
+
+
+.v-toolbar {
+  box-shadow: 0 1px 0px 0px rgba(0, 0, 0, .1);
+  background-color: #FFFFFF;
+  
+}
+
+.v-toolbar__title {
+  margin-left: 0px;
+  margin-top: 8px;
+}
+.topbar .v-toolbar__content{
+  padding: 0px;
+}
+.v-list__tile__title {
+  height: 20px;
+}
+
+.profileBtn {
+  position: relative;
+  right: -24px;
+}
+
+</style>

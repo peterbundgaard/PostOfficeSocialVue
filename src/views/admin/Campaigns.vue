@@ -2,7 +2,7 @@
   <div>
     <v-container>
       <div class="ViewHeader">
-        <div class="headline">Campaigns</div>
+        <div class="headline2">Campaigns</div>
         <div class="body-1">Her kan man skrive en tagline</div>
     </div>
     </v-container>

@@ -31,7 +31,7 @@
     <v-layout align-center justify-center row fill-height>
       <v-flex xs12 sm6 md4>
         <div class="signup-header headline1 ">Hurray, Welcome &#x1F64C;<br> Let's setup your business.</div>
-        <v-form >
+        <v-form class="x-large-input">
           <div class="input-label">Company name</div>
           <v-text-field
             type="name"

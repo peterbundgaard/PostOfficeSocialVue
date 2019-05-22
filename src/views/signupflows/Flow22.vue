@@ -40,7 +40,7 @@
         </ul>
       </div> -->
         <div class="signup-header headline1 ">Here we go! &#x1F44B;<br>Create a profile to get started!</div>
-    <v-form >
+    <v-form class="x-large-input" >
     <div class="input-label">Name</div>
     <v-text-field
       type="name"

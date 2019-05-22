@@ -38,7 +38,7 @@ export default [
         name: 'UserTemplates',
         component: UserTemplates,
         meta: {
-          title: 'Templates'
+          title: 'Create'
         }
       },
       {
